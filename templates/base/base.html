@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+{% block headtop %}
+
+{% endblock %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>{% block title %}Marvel Skins{% endblock %}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="\media\assets\images\favicon.ico" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="/media/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/media/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/media/assets/css/templatemo-sixteen.css">
+    <link rel="stylesheet" href="/media/assets/css/owl.css">
+
+{% block headbottom %}
+
+{% endblock %}
+
+</head>
+
+<body>
+
+{% block header %}
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/home/"><h2>Marvel <em>Skins</em></h2></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item {% block tabhome %}{% endblock %}">
+                            <a class="nav-link" href="home">Home</a>
+                        </li>
+                        <li class="nav-item {% block tabproduct %}{% endblock %}">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item {% block tabaccount %}{% endblock %}">
+                            <a class="nav-link" href="accounts/register">Accounts</a>
+                        </li>
+                        <li class="nav-item {% block tabcontact %}{% endblock %}">
+                            <a class="nav-link" href="/home/">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+{% endblock %}
+
+
+{% block body %}
+
+{% endblock %}
+
+
+{% block footer %}
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-content">
+                        <p>Copyright &copy; 2023 MARVEL SKINS Co.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/media/vendor/jquery/jquery.min.js"></script>
+    <script src="/media/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="/media/assets/js/custom.js"></script>
+    <script src="/media/assets/js/owl.js"></script>
+    <script src="/media/assets/js/slick.js"></script>
+    <script src="/media/assets/js/isotope.js"></script>
+    <script src="/media/assets/js/accordions.js"></script>
+
+
+
+    <script type = "text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0;   //set a cleared flag for each field
+        function clearField(t){                     //declaring the array outside the
+            if(! cleared[t.id]){                    // function makes it static and global
+                cleared[t.id] = 1;                  // you could use true and false, but that's more typing
+                t.value='';                         // with more chance of typos
+                t.style.color='#fff';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!-- Scroll to top button -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<style>
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: hsl(222, 91%, 55%);
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    #myBtn:hover {
+        background-color: #555;
+    }
+</style>
+<script>
+
+    let mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
